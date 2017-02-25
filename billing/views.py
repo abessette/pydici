@@ -15,11 +15,11 @@ from django.shortcuts import render
 from django.core import urlresolvers
 from django.http import HttpResponseRedirect, HttpResponse, Http404
 from django.db.models import Sum, Q
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic import TemplateView
 from django.views.decorators.cache import cache_page
 from django.forms.models import inlineformset_factory
 
-from wkhtmltopdf.views import PDFTemplateView
+from django_weasyprint import PDFTemplateView
 
 from billing.models import ClientBill, SupplierBill, BillDetail, BillExpense
 from leads.models import Lead
